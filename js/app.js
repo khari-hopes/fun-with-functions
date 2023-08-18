@@ -67,7 +67,7 @@ let product = multiply(a, b, c);
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-//testSumAndMultiply(4,7,5);
+// testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -85,8 +85,15 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
   // Write your code here
-
-}
+    function sum(a, b) {
+      return a + b;
+    }
+  
+    let summed = sum(sum(sumArr[0], sumArr[1]), sumArr[2]);
+    let str = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${summed} is their sum.`;
+  
+    return [summed, str];
+  }
 
 // Here is the test for sumArray(); uncomment it to run it
 
